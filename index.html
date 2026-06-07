@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Caballero - Clash Royale</title>
+    <!-- Importación de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. BUSCADOR INTERNO / MENÚ DE NAVEGACIÓN -->
+    <nav class="buscador-navegacion">
+        <div class="buscador-contenedor">
+            <span class="icono-buscar">🔍</span>
+            <select id="buscador-interno" onchange="location = this.value;">
+                <option value="" disabled selected>Buscar sección de la página...</option>
+                <option value="#inicio">Inicio / Título</option>
+                <option value="#informacion">Información General</option>
+                <option value="#caracteristicas">Mejores Características</option>
+                <option value="#galeria-video">Video Demostrativo</option>
+                <option value="#analisis-meta">Análisis del Meta actual</option>
+                <option value="#formulario-comunidad">Unirse a la Comunidad</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- HEADER CON EL TÍTULO ANIMADO -->
+    <header id="inicio" class="encabezado-principal">
+        <div class="marquesina-contenedor">
+            <h1 class="titulo-marquesina">El Caballero es la Mejor Carta de Clash Royale</h1>
+        </div>
+    </header>
+    <!-- 5 Y 6. SECCIÓN DE INFORMACIÓN GENERAL -->
+    <main id="informacion" class="contenedor-principal">
+        <section class="tarjeta-info">
+            <!-- RECUERDA: Cambia "tu-imagen.jpg" por el nombre real de tu archivo de imagen (ej. caballero.png) -->
+            <img src="FOTOVACABABOSA.jpg" alt="El Caballero de Clash Royale" class="imagen-horizontal">
+            
+            <p class="texto-descripcion">
+                Capacidad defensiva y ofensiva excelente, costo de elixir bueno: ni muy caro y bastante accesible. 
+                Te puede salvar en múltiples ocasiones y, si puedes usar a su evolución o versión héroe, tienes una 
+                mayor posibilidad de jugadas tanto defensivas como ofensivas. Es uno de los mejores minitanques y una 
+                de las primeras cartas que te dan al iniciar el juego, por eso te acompaña desde el inicio de tu partida.
+            </p>
+        </section>
+
+        <!-- 7. TABLA DESPLEGABLE INTERACTIVA -->
+        <section id="caracteristicas" class="seccion-tabla">
+            <details class="desplegable-contenedor">
+                <summary class="desplegable-titulo">🟢 Click aquí para ver: Mejores Características</summary>
+                
+                <div class="tabla-borde">
+                    <table class="tabla-caracteristicas">
+                        <thead>
+                            <tr>
+                                <th>Característica Clave</th>
+                                <th>Opinión de Pros / YouTubers</th>
+                                <th>Impacto en la Partida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Eficiencia de Elixir (Costo 3)</strong></td>
+                                <td>Permite realizar intercambios positivos de elixir constantemente en defensa.</td>
+                                <td>Detiene cartas de 4 o 5 de elixir, dándote ventaja económica inmediata.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Versión Héroe / Evolución</strong></td>
+                                <td>Desbloquea mecánicas rotas que absorben daño masivo o limpian líneas enteras.</td>
+                                <td>Obliga al oponente a gastar recursos extra y cambia el ritmo del ataque.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rol de Minitanque Perfecto</strong></td>
+                                <td>Es el soporte ideal para tanquear ballestas, morteros o contragolpes rápidos.</td>
+                                <td>Protege a tus tropas de daño a distancia mientras elimina amenazas en tu zona.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <section id="galeria-video" class="tarjeta-info">
+            <h2 class="subtitulo-seccion">UN GRAN HEROE ✨</h2>
+            
+            <!-- Video Local de tus archivos -->
+            <div class="contenedor-video-local">
+                <!-- RECUERDA: Cambia "tu-video.mp4" por el nombre real de tu archivo de video (ej. jugada.mp4) -->
+                <video src="VIDEOVACABABOSA.mp4" controls class="video-archivo">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <p class="pie-video">Todos necesitamos un heroe incluso en los ultimos momentos</p>
+            </div>
+
+            <!-- Botón / Link a YouTube -->
+            <div class="contenedor-enlace-youtube">
+                <p class="texto-previo-enlace">Mejores mazos competitivos con el Caballero Héroe:</p>
+                <a href="https://youtu.be" target="_blank" class="boton-youtube">
+                    <span class="icono-play">▶</span> Ver Video en YouTube
+                </a>
+            </div>
+        </section>
+
+        <!-- 10. TEXTO EXPLICATIVO DEL META ACTUAL -->
+        <section id="analisis-meta" class="tarjeta-info">
+            <h2 class="subtitulo-seccion">👑 ¿Por qué es la carta más usada actualmente?</h2>
+            <p class="texto-descripcion">
+                El Caballero se mantiene en la cima del uso competitivo debido a su ridícula relación calidad-precio. 
+                Por apenas 3 gotas de elixir, ofrece una cantidad de puntos de vida enorme que puede frenar ataques 
+                potentes de unidades de mayor costo. En el meta de hoy en día, su sinergia con estructuras de ciclado 
+                rápido (como el Mortero o la Ballesta) y su capacidad para transformarse en una amenaza ofensiva masiva 
+                gracias a su Evolución o su versión Héroe, lo convierten en una pieza indispensable para cualquier jugador 
+                que busque consistencia tanto en copas como en ligas profesionales.
+            </p>
+        </section>
+ <form class="formulario-clash" action="https://formsubmit.co/lonesesitoparaelproyecto001@gmail.com" method="POST">
+                
+                <!-- Configuración oculta para evitar spam y redirecciones molestas -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://formsubmit.co/lonesesitoparaelproyecto001@gmail.com">
+
+                <div class="campo-grupo">
+                    <label for="nombre">Tu Nombre:</label>
+                    <input type="text" id="nombre" name="Nombre Completo" placeholder="Ej. Juan Pérez" required>
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="nombre-cr">Nombre en Clash Royale (Tag / Nick):</label>
+                    <input type="text" id="nombre-cr" name="Tag de Clash Royale" placeholder="Ej. #CR-Guerrero99" required>
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="motivo">¿Por qué visitas la página o comentario extra?</label>
+                    <textarea id="motivo" name="Mensaje o Motivo" rows="4" placeholder="Cuéntanos tu estrategia favorita con el Caballero..." required></textarea>
+                </div>
+                
+                <button type="submit" class="boton-enviar">Enviar Comentario</button>
+            </form>
+             <div class="contador-visitas-fijo">
+        <button id="boton-contador" class="boton-contador-diseno">
+            👁️ Visitas: <span id="numero-visitas">1</span>
+        </button>
+    </div>
+
+    <!-- PROGRAMACIÓN INTERACTIVA DEL CONTADOR -->
+    <script>
+        // 1. Intentamos obtener el número de visitas previas guardadas en el navegador
+        let visitasActuales = localStorage.getItem('contadorPaginaClash');
+        
+        // 2. Si ya existen visitas guardadas, le sumamos 1 (nueva carga). Si no, empezamos en 1
+        if (visitasActuales) {
+            visitasActuales = parseInt(visitasActuales) + 1;
+        } else {
+            visitasActuales = 1;
+        }
+        
+        // 3. Guardamos el nuevo valor actualizado en la memoria del navegador
+        localStorage.setItem('contadorPaginaClash', visitasActuales);
+        
+        // 4. Pintamos el número final dentro de nuestra etiqueta HTML
+        const elementoNumero = document.getElementById('numero-visitas');
+        elementoNumero.textContent = visitasActuales;
+
+        // 5. BONUS: Si el usuario hace clic sobre el botón, también sumamos de forma interactiva
+        document.getElementById('boton-contador').addEventListener('click', () => {
+            visitasActuales++;
+            localStorage.setItem('contadorPaginaClash', visitasActuales);
+            elementoNumero.textContent = visitasActuales;
+            alert("¡Gracias por registrar tu visita en el contador de la comunidad! ⚔️");
+        });
+    </script>
+</body>
+</html>
