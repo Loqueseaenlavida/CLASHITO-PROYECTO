@@ -1,0 +1,371 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+     font-family: "Dancing Script", cursive;
+}
+body {
+    /* Fondo suave entre verde y azul (Turquesa pastel) */
+    background-color: #e0f2f1; 
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    scroll-behavior: smooth; /* Hace que el buscador navegue con un deslizado suave */
+    padding-top: 60px; /* Espacio para que el buscador fijo no tape el contenido */
+}
+
+/* 1. ESTILOS DEL BUSCADOR INTERNO FIJO */
+.buscador-navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1abc9c; /* Verde azulado vibrante */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.buscador-contenedor {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.icono-buscar {
+    margin-right: 10px;
+}
+
+#buscador-interno {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 0.95rem;
+    color: #34495e;
+    cursor: pointer;
+}
+
+/* 3 Y 4. ESTILOS DEL TÍTULO ANIMADO (MARQUESINA) */
+.encabezado-principal {
+    background-color: #2c3e50; /* Fondo oscuro para resaltar las letras */
+    padding: 20px 0;
+    overflow: hidden; /* Oculta el texto que se sale de la pantalla */
+    box-shadow: inset 0px 0px 15px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.marquesina-contenedor {
+    width: 100%;
+    display: flex;
+}
+
+.titulo-marquesina {
+    font-family: 'Dancing Script', cursive; /* Fuente solicitada */
+    font-size: 2.8rem;
+    color: #f1c40f; /* Color dorado Clash Royale */
+    white-space: nowrap;
+    padding-left: 100%; /* Empieza completamente fuera de la pantalla a la derecha */
+    animation: letreroDigital 15s linear infinite;
+}
+
+/* Animación del movimiento de derecha a izquierda */
+@keyframes letreroDigital {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0); /* Se desplaza hacia la izquierda por completo */
+    }
+}
+
+.contenedor-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tarjeta informativa */
+.tarjeta-info {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* Ajuste de la imagen horizontal */
+.imagen-horizontal {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover; /* Recorta la imagen armónicamente si es muy grande */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Formato del texto descriptivo */
+.texto-descripcion {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #34495e;
+    text-align: justify;
+}
+
+/* Estilos del contenedor desplegable (<details>) */
+.desplegable-contenedor {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 2px solid #1abc9c;
+}
+
+/* Botón interactivo para desplegar */
+.desplegable-titulo {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1abc9c;
+    cursor: pointer;
+    list-style: none; /* Quita la flecha por defecto del navegador */
+    transition: background 0.3s;
+}
+
+.desplegable-titulo:hover {
+    background-color: #16a085;
+}
+
+/* Estilos de la tabla interna */
+.tabla-borde {
+    padding: 20px;
+    overflow-x: auto; /* Permite scroll horizontal si se ve en celulares */
+}
+
+.tabla-caracteristicas {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.tabla-caracteristicas th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.tabla-caracteristicas td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+    font-size: 0.95rem;
+    vertical-align: top;
+}
+
+/* Color alterno en las filas de la tabla */
+.tabla-caracteristicas tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.subtitulo-seccion {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1abc9c;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Contenedor del video local */
+.contenedor-video-local {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #bdc3c7;
+}
+
+.video-archivo {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.pie-video {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Sección del botón de YouTube */
+.contenedor-enlace-youtube {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.texto-previo-enlace {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botón interactivo estilo YouTube */
+.boton-youtube {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ff0000; /* Rojo oficial de YouTube */
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton-youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px); /* Pequeño efecto de salto al pasar el mouse */
+}
+
+.icono-play {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+.formulario-clash {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Espacio uniforme entre campos */
+    margin-top: 15px;
+}
+
+/* Agrupador de etiqueta y caja de texto */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Estilos de las etiquetas de texto (Labels) */
+.campo-grupo label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+/* Cajas de entrada de texto e inputs */
+.campo-grupo input[type="text"], 
+.campo-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
+}
+
+/* Efecto visual cuando el usuario hace clic para escribir */
+.campo-grupo input[type="text"]:focus, 
+.campo-grupo textarea:focus {
+    border-color: #1abc9c;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3);
+}
+
+/* Ocultar los inputs técnicos de configuración para que el usuario no los vea */
+.formulario-clash input[type="hidden"] {
+    display: none;
+}
+
+/* Botón interactivo de envío */
+.boton-enviar {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 5px;
+}
+
+/* Efectos para el botón al pasar el mouse y hacer clic */
+.boton-enviar:hover {
+    background-color: #16a085;
+}
+
+.boton-enviar:active {
+    transform: scale(0.98); /* Pequeño efecto de hundimiento al presionar */
+}
+
+.contador-visitas-fijo {
+    position: fixed;
+    bottom: 20px; /* Separación desde abajo */
+    right: 20px;  /* Separación desde la derecha */
+    z-index: 2000; /* Asegura que flote por encima de cualquier otro elemento */
+}
+
+/* Diseño del botón del contador */
+.boton-contador-diseno {
+    background-color: #2c3e50; /* Azul oscuro que combina con el encabezado */
+    color: #ffffff;
+    border: 2px solid #1abc9c; /* Borde turquesa a juego con el buscador y botones */
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px; /* Bordes completamente redondeados estilo píldora */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para darle profundidad */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el emoji de ojo y el texto */
+    transition: all 0.3s ease;
+}
+
+/* El número de las visitas en un color destacado (dorado Clash Royale) */
+#numero-visitas {
+    color: #f1c40f;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+/* Efectos interactivos al pasar el mouse por encima del contador */
+.boton-contador-diseno:hover {
+    background-color: #1abc9c; /* Intercambia el fondo a turquesa */
+    border-color: #2c3e50;      /* Intercambia el borde a azul oscuro */
+    transform: translateY(-3px); /* Se eleva sutilmente */
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.4); /* Sombra turquesa brillante */
+}
+
+/* Pequeño efecto físico al presionarlo */
+.boton-contador-diseno:active {
+    transform: translateY(-1px);
+}
